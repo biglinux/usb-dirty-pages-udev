@@ -8,8 +8,9 @@ Low values slow down the system, but high values are bad for using removable dev
 
 To perform the change manually, just use 2 commands, see the example considering that the USB device is /dev/sdb, first we will stipulate the use of 16 MB of max_bytes, which is equivalent to dirty pages, in the second command we activate this limit:
 
-echo 16777216 > /sys/block/sdb/bdi/max_bytes
-echo 1 > /sys/block/sdb/bdi/strict_limit
+```echo 16777216 > /sys/block/sdb/bdi/max_bytes
+```echo 1 > /sys/block/sdb/bdi/strict_limit
+
 
 This repository includes a configuration file for udev that automates the task and always uses 16 MB of dirty pages for storage devices plugged into USB ports.
 
@@ -24,7 +25,7 @@ Valores baixos trazem lentidão para o sistema, mas valores altos são ruins par
 
 Para efetuar a troca manualmente basta utilizar 2 comandos, veja o exemplo considerando que o dispositivo USB é o /dev/sdb, primeiro iremos estipular o uso de 16 MB de max_bytes, que equivale ao dirty pages, no segundo comando ativamos esse limite:
 
-echo 16777216 > /sys/block/sdb/bdi/max_bytes
-echo 1 > /sys/block/sdb/bdi/strict_limit
+```echo 16777216 > /sys/block/sdb/bdi/max_bytes
+```echo 1 > /sys/block/sdb/bdi/strict_limit
 
 Esse repositório inclui um arquivo de configuração para o udev que automatiza a tarefa e utiliza sempre 16 MB de dirty pages para dispositivos de armazenamento plugados em portas USB.
