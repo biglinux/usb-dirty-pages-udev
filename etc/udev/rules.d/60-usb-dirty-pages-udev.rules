@@ -1,0 +1,1 @@
+ACTION=="add", KERNEL=="sd[a-z]", SUBSYSTEM=="block", ENV{ID_BUS}=="usb", RUN+="/usr/bin/bash -c 'echo 1 > /sys/block/%k/bdi/strict_limit; echo 16777216 > /sys/block/%k/bdi/max_bytes'"
