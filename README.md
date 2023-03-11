@@ -1,4 +1,4 @@
-# EN
+# EN - Use udev to specify dirty pages for usb devices i.e. cache in ram before writing files to usb devices
 
 Dirty pages is the name used to define how much cache in RAM memory must be used before recording data on storage devices.
 
@@ -14,7 +14,7 @@ echo 1 > /sys/block/sdb/bdi/strict_limit
 This repository includes a configuration file for udev that automates the task and always uses 16 MB of dirty pages for storage devices plugged into USB ports.
 
 
-# PT
+# PT - Use o udev para especificar dirty pages para dispositivos usb, ou seja, cache em RAM antes de gravar arquivos em dispositivos USB
 
 Dirty pages é o nome utilizado para definir quanto de cache em memória RAM deve ser utilizada antes de efetuar a gravação dos dados em dispositivos de armazenamento.
 
