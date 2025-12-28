@@ -7,8 +7,8 @@ pkgdesc="Use udev to specify dirty pages for usb devices i.e. cache in ram befor
 arch=('any')
 url="https://github.com/biglinux/$pkgname"
 license=('GPL3')
-provides=("$pkgname")
-# conflicts=('')
+provides=("$pkgname" "udev-usb-sync")
+conflicts=('udev-usb-sync')
 source=("git+${url}.git")
 md5sums=('SKIP')
 if [ -e "${pkgname}.install" ];then
